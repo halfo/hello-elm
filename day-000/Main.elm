@@ -60,16 +60,21 @@ type Msg
 
 mapIntToDirection : Int -> Direction
 mapIntToDirection dirInt =
-    if dirInt == 1 then
-        Left
-    else if dirInt == 2 then
-        Right
-    else if dirInt == 3 then
-        Up
-    else if dirInt == 4 then
-        Down
-    else
-        None
+    case dirInt of
+        1 ->
+            Left
+
+        2 ->
+            Right
+
+        3 ->
+            Up
+
+        4 ->
+            Down
+
+        _ ->
+            None
 
 
 inRange : Int -> Int -> Bool
